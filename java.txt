@@ -1,0 +1,119 @@
+
+ 
+26.ORM:- Object relational mapping.
+
+27.components of JPA:- persistence.xml
+                    entity manager
+                    query to execute
+28.
+one to many:- example for this:- one institute will have many student.
+one to one:- one user can have one account.
+many to one:- many users are using one jio network.
+@Entity:- it is an annotation used to declear the class as entity class. it will represent the table in the database.
+
+29.
+JPQL:- java persistence Query language.A query language similar to SQL but works with JPA entities. 
+30.
+Query:-@namedQuery("Select min(p.price) from product p");
+31.
+<properties>
+<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver">
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/project">
+<property name="javax.persistence.jdbc.user" value="root">
+<property name="javax.persistence.jdbc.password" value="Xworkz@123">
+
+
+32.
+load driver
+connection
+create statement
+execute statement
+resultset
+close
+
+33.
+
+polymorphism: we can achieve with 2 methods: overloading and overriding
+
+overloading: where the method can have same name but differ in parameter.
+ ex:- public void add(){
+
+}
+
+public void add(int a){
+}
+
+public void add(int a, int b){
+}
+
+overriding:- we will have a method without body in interface. we will implement the interface and we have to write a implementation for unimplemented method. we can change the implementation in various classes, with @override annotation.
+
+interface: public void add(int a, int b);
+class: class implements interface{
+ 
+}
+
+
+35.
+ compilation error.
+
+36.
+compilation error, due to ambiguity
+
+38.
+true
+
+39.
+Java programming
+
+40.
+true
+
+41.
+4
+
+42.
+100
+
+43.
+yes
+
+45.
+exception. due to ambiguity.
+
+46.
+response:- Hello! 
+
+50.
+public class NumberPattern {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+57.
+public class PrintNumbers {
+    public static void main(String[] args) {
+        print(1);
+    }
+
+    public static void print(int num) {
+        if (num > 100) {
+            return; 
+        }
+        System.out.println(num);
+        print(num + 1); 
+    }
+}

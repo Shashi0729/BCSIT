@@ -1,0 +1,86 @@
+1.create table employee(
+  EmpId int primarykey,
+  Name varchar(25),
+  Age int,
+  JoiningDate date
+);
+
+1.2
+alter table employee
+add Salary decimal;
+
+2.drop table TempData;
+
+3.create table Product(
+ProductId int primarykey,
+ProductName varchar(25) notnull,
+Price decimal check (price>0)
+);
+
+4.
+alter table OldOrders
+rename to ArchivedOrders;
+
+5.
+Create index category ON Inventory(Category);
+
+6.
+insert into Student(StudentId, Name,age,grade) values (101,'alice',20,'A');
+
+7.
+Update Student
+set Grade='B'
+where marks < 60;
+
+8.
+delete from Order
+where Status='Cancelled';
+
+11.select name
+from employee
+where joiningdate > '2020-01-01';
+
+12. select AVG(salary)
+    from Employee;
+    
+    select MIN(salary)
+    from Employee;
+    
+    select MAX(salary)
+    from Employee;
+13.
+ select *
+from Orders
+where OrderAmount >1000 And Status='Delivered';
+
+14.
+select count(sold)
+from Sales
+orderby category;
+
+15. select c.name, o.*
+    from customer c  
+    Join `order` o ON o.customerId = c.customerId;
+16.
+ select c.name, o.*
+    from customer c
+    Join `order` o ON o.customerId = c.customerId;
+
+18. select name
+from employee
+where salary > (Select avg(salary) from employee);
+
+19.select *
+from Orders o
+where Order_Amount >(Select avg(Order_Amount) from Orders
+where Customer_id = o.Customer_id); 
+
+
+
+
+
+
+
+
+
+
